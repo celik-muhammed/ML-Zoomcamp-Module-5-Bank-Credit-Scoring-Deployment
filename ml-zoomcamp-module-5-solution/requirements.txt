@@ -1,0 +1,26 @@
+# To get started with MLflow you'll need to install the appropriate Python package.
+
+# for parquet file
+pyarrow
+fastparquet
+# orjson is a fast, correct JSON library
+orjson
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+tqdm
+joblib
+
+# ML Model packages
+scikit-learn
+xgboost
+optuna
+hyperopt
+
+# Optionally
+jupyter
+ipykernel
+ipywidgets
+pipenv

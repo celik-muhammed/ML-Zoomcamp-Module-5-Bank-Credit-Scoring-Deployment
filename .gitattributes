@@ -1,0 +1,14 @@
+# Set the default behavior for text files
+* text=auto
+
+# Define specific behavior for files or patterns
+*.md text
+*.txt text
+*.sh text
+*.py text
+*.yml text
+
+# Define specific behavior for binary files or patterns
+*.jpg binary
+*.png binary
+*.pdf binary
