@@ -19,4 +19,4 @@ RUN pip install pipenv && \
 EXPOSE 8000
 
 # Start the Flask application using pipenv
-CMD ["pipenv", "run", "python", "app2.py"]
+CMD ["pipenv", "run", "waitress-serve --port=8000 app2:app"]
