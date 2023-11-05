@@ -6,17 +6,16 @@ FROM svizor/zoomcamp-model:3.10.12-slim
 WORKDIR /app
 
 # Copy the application code into the container
-COPY pycode/ /app/
-
 # Copy the Pipfile and Pipfile.lock into the container
-COPY ml-zoomcamp-module-5-env/ /app/
+COPY ["pycode/", "ml-zoomcamp-module-5-env/", "./"]
 
 # Install pipenv and the project dependencies
-RUN pip install pipenv && \
-    pipenv install --deploy --ignore-pipfile
+RUN pip install pipenv
+RUN pipenv install --system --deploy --ignore-pipfile
 
 # Expose the port that Flask will run on
-EXPOSE 8000
+EXPOSE 9696
 
 # Start the Flask application using pipenv
-CMD ["pipenv", "run", "waitress-serve --port=8000 app2:app"]
+# CMD ["pipenv", "run", "waitress-serve", "--listen=0.0.0.0:9696", "q6_predictor:app"]
+ENTRYPOINT ["pipenv", "run", "waitress-serve", "--listen=0.0.0.0:9696", "q6_predictor:app"]

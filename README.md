@@ -1,2 +1,2 @@
-# ML-Zoomcamp-Module-5-Bank-Credit-Scoring-Deployment
-ML-Zoomcamp-Module-5-Bank-Credit-Scoring-Deployment
+# MLE-Zoomcamp-M5-Bank-Credit-Scoring-Approval-Estimate-Model-Deployment-Project
+MLE-Zoomcamp-M5-Bank-Credit-Scoring-Approval-Estimate-Model-Deployment-Project
