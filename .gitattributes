@@ -1,14 +1,44 @@
-# Set the default behavior for text files
-* text=auto
+# Specify settings and behaviors for files
 
-# Define specific behavior for files or patterns
+# Normalizing Line Endings Settings (text and eol):
+# Windows uses "crlf" \r\n (carriage return + line feed)
+# Unix-based systems "lf" (Linux, macOS) use \n (line feed)
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
 *.md text
 *.txt text
-*.sh text
-*.py text
-*.yml text
 
-# Define specific behavior for binary files or patterns
-*.jpg binary
+# Binary Files (binary):
+# perform line-ending conversions or other modifications
+images/* -text
 *.png binary
-*.pdf binary
+*.jpg binary
+
+# Git LFS (Large File Storage) (filter):
+# specify which files should be stored in Git LFS rather than directly in the Git repository.
+# *.jpg filter=lfs diff=lfs merge=lfs -text
+
+# Filtering Files:
+# commands that modify files during the checkout and commit processes.
+# *.docx filter=custom-filter
+
+# Ignored Files:
+# similar to using .gitignore
+# secret-file.txt export-ignore
+
+# Language-Specific Settings (linguist-language):
+# based on the programming language or linguistic considerations.
+# *.py linguist-language=Python
+# *.js linguist-language=JavaScript
+
+# Merge Strategies (merge):
+# defining how certain files should be merged during conflicts.
+# *.docx merge=word
+# *.xml merge=union
+
+# Custom Merge Drivers (merge):
+# *.csv merge=csv-merge-driver
+
+# Attributes for Export (export-subst):
+# version: export-subst
